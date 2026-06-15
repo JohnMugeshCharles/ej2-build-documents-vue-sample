@@ -1203,7 +1203,7 @@ const changeTab = (args: any): void => {
             let elementList = demoSection.getElementsByClassName('e-control e-lib');
             for (let i = 0; i < elementList.length; i++) {
                 let instance = (elementList[i] as any).ej2_instances;
-                if (instance && instance[0] && typeof instance[0].refresh === 'function' && ['aiassistview', 'chat-ui'].indexOf(instance[0].getModuleName()) === -1) {
+                if (instance && instance[0] && typeof instance[0].refresh === 'function' && ['aiassistview', 'chat-ui', 'DocumentEditorContainer'].indexOf(instance[0].getModuleName()) === -1) {
                     instance[0].refresh();
                 }
                 if (instance && instance[0] && instance[0].getModuleName() !== 'DashboardLayout')
